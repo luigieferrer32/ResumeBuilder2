@@ -40,21 +40,21 @@
                         <form>
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="email" placeholder="Your Email" autofocus="">
-                                    @Html.TextBoxFor(model => model.USERNAME, new { @class = "form-control", id = "Username" })
+                                    @*<input class="input is-large" type="email" placeholder="Your Email" autofocus="">*@
+                                    @Html.TextBoxFor(model => model.USERNAME, new { @class = "input is-large", id = "Username", type = "email", placeholder = "Your Email" })
                                 </div>
                             </div>
 
                             @*<div class="field">
-                                    <div class="control">
-                                        @Html.TextBoxFor(model => model.USERNAME, new { @class = "form-control", placeholder = "Enter Username", id = "Username" })
-                                        <span id="username-error-msg" class="error-msg" style="color:red"></span>
-                                    </div>
-                                </div>*@
+            <div class="control">
+                @Html.TextBoxFor(model => model.USERNAME, new { @class = "form-control", placeholder = "Enter Username", id = "Username" })
+                <span id="username-error-msg" class="error-msg" style="color:red"></span>
+            </div>
+        </div>*@
 
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="password" placeholder="Your Password">
+                                    @Html.PasswordFor(model => model.PASSWORD, new { @class = "input is-large", placeholder = "Enter password", id = "Password", type = "password" })
                                 </div>
                             </div>
                             <div class="field">
@@ -63,7 +63,8 @@
                                     Remember me
                                 </label>
                             </div>
-                            <button class="button is-block is-info is-large is-fullwidth">Login</button>
+
+                            <button class="button is-block is-info is-large is-fullwidth" type="submit" id="btnLogin">Login</button>
                         </form>
                     </div>
                     <p class="has-text-grey">
@@ -75,11 +76,11 @@
             </div>
         </div>
     </section>
-    <script async type="text/javascript" src="../js/bulma.js"></script>
+    @*<script async type="text/javascript" src="../js/bulma.js"></script>*@
 </body>
 </html>
 
-@Scripts.Render("~/Scripts/login.js")
+@Scripts.Render("~/js/Login.js")
 <script type="text/javascript">
     var userLoginUrl = '@Url.Action("AuthenticateUser", "Login")';
 </script>
