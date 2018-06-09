@@ -24,6 +24,9 @@ namespace ResumeBuilder.Controllers
             return View();
         }
 
-
+        public ActionResult Pricing()
+        {
+            return View();
+        }
     }
 }
