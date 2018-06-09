@@ -8,12 +8,31 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic.Manager
 {
-    class UserManager
-    {
-        public void SavePersonInfo(PERSON person)
+        public class UserManager
         {
-            UserRepo userRepo = new UserRepo();
-            //userRepo.Create(person);
-        }
+            public bool AuthenticateUser(USER user)
+            {
+                UserRepo userRepo = new UserRepo();
+                bool AccessStatus = false;
+
+                var dataUser = userRepo.RetrieveByName(user.USERNAME);
+
+                if (dataUser != null)
+                {
+                    if (dataUser.PASSWORD == user.PASSWORD)
+                    {
+                        AccessStatus = true;
+                    }
+                }
+
+                return AccessStatus;
+            }
+
+            //public void RegisterUser(USER user)
+            //{
+            //    UserRepo userRepo = new UserRepo();
+            //    userRepo.Create(user);
+            //}
+
     }
 }
