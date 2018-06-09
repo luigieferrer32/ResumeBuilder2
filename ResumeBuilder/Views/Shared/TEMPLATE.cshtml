@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewBag.Title = "View";
+}
+@*----------------------------------HEADER---------------------------------------*@
+
+    <nav class="gtco-nav" role="navigation">
+        <div class="gtco-container">
+
+            <div class="row">
+                <div class="col-sm-2 col-xs-12">
+                    <div id="gtco-logo"><a href=@Url.Action("Index", null, new { area = string.Empty, controller = "Home" })><img src=@Url.Content("~/images/logo.png") alt="img HTML5 img"></a></div>
+                </div>
+                <div class="col-xs-10 text-right menu-1">
+                    <ul>
+                        <li class="active"><a href=@Url.Action("Index", null, new { area = string.Empty, controller = "Home" })>Home</a></li>
+                        <li><a href="about.html">Successful Resume</a></li>
+                        <li class="has-dropdown">
+                            <a href="services.html">Pricing</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">eCommerce</a></li>
+                                <li><a href="#">Branding</a></li>
+                                <li><a href="#">API</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="portfolio.html">Sign-in</a></li>
+                        <li><a href=@Url.Action("ContactUs", null, new { area = string.Empty, controller = "Home" })>Blogs/News Page</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <header id="gtco-header" class="gtco-cover" role="banner">
+        <div class="gtco-container">
+            <div class="row">
+                <div class="col-md-12 col-md-offset-0 text-left">
+                    <div class="display-t">
+                        <div class="display-tc">
+                            <div class="row">
+                                <div class="col-md-5 text-center header-img">
+                                    <img src=@Url.Content("~/images/cube.png") alt="img">
+                                </div>
+                                <div class="col-md-7 copy">
+                                    <h1>Your Resume, Made Easy</h1>
+                                    <p>Stand out and make sure the key things come across</p>
+                                    <p><a href="" target="_blank" class="btn btn-white">CREATE RESUME</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    @*----------------------------------------------FOOTER-----------------------------------------*@
+    <footer id="gtco-footer" class="gtco-section" role="contentinfo">
+        <div class="gtco-container">
+            <div class="row row-pb-md">
+                <div class="col-md-8 col-md-offset-2 gtco-cta text-center">
+                    <h3>We Love To Talk About Your Business</h3>
+                    <p><a href="@Url.Action("ContactUs", null, new { area = string.Empty, controller = "Home" })" class="btn btn-white btn-outline">Contact Us</a></p>
+                </div>
+            </div>
+            <div class="row row-pb-md">
+                <div class="col-md-4 gtco-widget gtco-footer-paragraph">
+                    <h3>Resume Builder</h3>
+                    <p>Not happy with your current resume?</p>
+                </div>
+                <div class="col-md-4 gtco-footer-link">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="gtco-list-link">
+                                <li><a href=@Url.Action("Index", null, new { area = string.Empty, controller = "Home" })>Home</a></li>
+                                <li><a href="#">Successful Resume</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">Sign-In</a></li>
+                                <li><a href="#">Blogs/News Page</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <a href="tel://1234567890">+1 234 4565 2342</a> <br>
+                                <a href="#">info@domain.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 gtco-footer-subscribe">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                            <input type="email" class="form-control" id="" placeholder="Email">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="gtco-copyright">
+            <div class="gtco-container">
+                <div class="row">
+                    <div class="col-md-6 text-left">
+                        <p><small>&copy; 2018. All rights reserved. </small></p>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <p><small>Made with love by people who care.</a></small> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>

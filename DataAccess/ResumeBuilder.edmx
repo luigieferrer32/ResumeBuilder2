@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ResumeBuilderModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="EDUCATION">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SCHOOL_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="SCHOOL_LOCATION" Type="nvarchar" MaxLength="50" />
+          <Property Name="DEGREE" Type="nvarchar" MaxLength="50" />
+          <Property Name="FIELD_OF_STUDY" Type="nvarchar" MaxLength="50" />
+          <Property Name="GRADUATION_YEAR" Type="datetime" />
+          <Property Name="ID_PERSON" Type="int" />
+        </EntityType>
+        <EntityType Name="PERSON">
+          <Key>
+            <PropertyRef Name="ID_PERSON" />
+          </Key>
+          <Property Name="ID_PERSON" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FIRST_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="LAST_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="STREET_ADDRESS" Type="nvarchar" MaxLength="50" />
+          <Property Name="CITY" Type="nvarchar" MaxLength="50" />
+          <Property Name="STATE_PROVINCE" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZIPCODE" Type="nvarchar" MaxLength="50" />
+          <Property Name="DATE_OF_BIRTH" Type="datetime" />
+          <Property Name="NUMBER" Type="nvarchar" MaxLength="50" />
+          <Property Name="EMAIL_ADD" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SKILLS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SKILL_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_PERSON" Type="int" />
+        </EntityType>
+        <EntityType Name="USER">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERNAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="PASSWORD" Type="nchar" MaxLength="10" />
+          <Property Name="ID_PERSON" Type="int" />
+        </EntityType>
+        <EntityType Name="WORKEXPERIENCE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JOB_TITLE" Type="nvarchar" MaxLength="50" />
+          <Property Name="EMPLOYER" Type="nvarchar" MaxLength="50" />
+          <Property Name="CITY" Type="nvarchar" MaxLength="50" />
+          <Property Name="STATE" Type="nvarchar" MaxLength="50" />
+          <Property Name="START_MONTH" Type="datetime" />
+          <Property Name="START_YEAR" Type="datetime" />
+          <Property Name="END_MONTH" Type="datetime" />
+          <Property Name="END_YEAR" Type="nchar" MaxLength="10" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_PERSON" Type="int" />
+        </EntityType>
+        <Association Name="FK_EDUCATION_PERSON">
+          <End Role="PERSON" Type="Self.PERSON" Multiplicity="0..1" />
+          <End Role="EDUCATION" Type="Self.EDUCATION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSON">
+              <PropertyRef Name="ID_PERSON" />
+            </Principal>
+            <Dependent Role="EDUCATION">
+              <PropertyRef Name="ID_PERSON" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SKILLS_PERSON">
+          <End Role="PERSON" Type="Self.PERSON" Multiplicity="0..1" />
+          <End Role="SKILLS" Type="Self.SKILLS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSON">
+              <PropertyRef Name="ID_PERSON" />
+            </Principal>
+            <Dependent Role="SKILLS">
+              <PropertyRef Name="ID_PERSON" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USER_PERSON">
+          <End Role="PERSON" Type="Self.PERSON" Multiplicity="0..1" />
+          <End Role="USER" Type="Self.USER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSON">
+              <PropertyRef Name="ID_PERSON" />
+            </Principal>
+            <Dependent Role="USER">
+              <PropertyRef Name="ID_PERSON" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WORKEXPERIENCE_PERSON">
+          <End Role="PERSON" Type="Self.PERSON" Multiplicity="0..1" />
+          <End Role="WORKEXPERIENCE" Type="Self.WORKEXPERIENCE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSON">
+              <PropertyRef Name="ID_PERSON" />
+            </Principal>
+            <Dependent Role="WORKEXPERIENCE">
+              <PropertyRef Name="ID_PERSON" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ResumeBuilderModelStoreContainer">
+          <EntitySet Name="EDUCATION" EntityType="Self.EDUCATION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PERSON" EntityType="Self.PERSON" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SKILLS" EntityType="Self.SKILLS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USER" EntityType="Self.USER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WORKEXPERIENCE" EntityType="Self.WORKEXPERIENCE" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_EDUCATION_PERSON" Association="Self.FK_EDUCATION_PERSON">
+            <End Role="PERSON" EntitySet="PERSON" />
+            <End Role="EDUCATION" EntitySet="EDUCATION" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SKILLS_PERSON" Association="Self.FK_SKILLS_PERSON">
+            <End Role="PERSON" EntitySet="PERSON" />
+            <End Role="SKILLS" EntitySet="SKILLS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USER_PERSON" Association="Self.FK_USER_PERSON">
+            <End Role="PERSON" EntitySet="PERSON" />
+            <End Role="USER" EntitySet="USER" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WORKEXPERIENCE_PERSON" Association="Self.FK_WORKEXPERIENCE_PERSON">
+            <End Role="PERSON" EntitySet="PERSON" />
+            <End Role="WORKEXPERIENCE" EntitySet="WORKEXPERIENCE" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ResumeBuilderModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="EDUCATION">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SCHOOL_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SCHOOL_LOCATION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DEGREE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FIELD_OF_STUDY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="GRADUATION_YEAR" Type="DateTime" Precision="3" />
+          <Property Name="ID_PERSON" Type="Int32" />
+          <NavigationProperty Name="PERSON" Relationship="Self.FK_EDUCATION_PERSON" FromRole="EDUCATION" ToRole="PERSON" />
+        </EntityType>
+        <EntityType Name="PERSON">
+          <Key>
+            <PropertyRef Name="ID_PERSON" />
+          </Key>
+          <Property Name="ID_PERSON" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FIRST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LAST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STREET_ADDRESS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CITY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STATE_PROVINCE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ZIPCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DATE_OF_BIRTH" Type="DateTime" Precision="3" />
+          <Property Name="NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL_ADD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="EDUCATIONs" Relationship="Self.FK_EDUCATION_PERSON" FromRole="PERSON" ToRole="EDUCATION" />
+          <NavigationProperty Name="SKILLS" Relationship="Self.FK_SKILLS_PERSON" FromRole="PERSON" ToRole="SKILLS" />
+          <NavigationProperty Name="USERs" Relationship="Self.FK_USER_PERSON" FromRole="PERSON" ToRole="USER" />
+          <NavigationProperty Name="WORKEXPERIENCEs" Relationship="Self.FK_WORKEXPERIENCE_PERSON" FromRole="PERSON" ToRole="WORKEXPERIENCE" />
+        </EntityType>
+        <EntityType Name="SKILL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SKILL_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_PERSON" Type="Int32" />
+          <NavigationProperty Name="PERSON" Relationship="Self.FK_SKILLS_PERSON" FromRole="SKILLS" ToRole="PERSON" />
+        </EntityType>
+        <EntityType Name="USER">
+          <Key>
+            <PropertyRef Name="USER_ID" />
+          </Key>
+          <Property Name="USER_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PASSWORD" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="ID_PERSON" Type="Int32" />
+          <NavigationProperty Name="PERSON" Relationship="Self.FK_USER_PERSON" FromRole="USER" ToRole="PERSON" />
+        </EntityType>
+        <EntityType Name="WORKEXPERIENCE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JOB_TITLE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EMPLOYER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CITY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STATE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="START_MONTH" Type="DateTime" Precision="3" />
+          <Property Name="START_YEAR" Type="DateTime" Precision="3" />
+          <Property Name="END_MONTH" Type="DateTime" Precision="3" />
+          <Property Name="END_YEAR" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_PERSON" Type="Int32" />
+          <NavigationProperty Name="PERSON" Relationship="Self.FK_WORKEXPERIENCE_PERSON" FromRole="WORKEXPERIENCE" ToRole="PERSON" />
+        </EntityType>
+        <Association Name="FK_EDUCATION_PERSON">
+          <End Role="PERSON" Type="Self.PERSON" Multiplicity="0..1" />
+          <End Role="EDUCATION" Type="Self.EDUCATION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSON">
+              <PropertyRef Name="ID_PERSON" />
+            </Principal>
+            <Dependent Role="EDUCATION">
+              <PropertyRef Name="ID_PERSON" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SKILLS_PERSON">
+          <End Role="PERSON" Type="Self.PERSON" Multiplicity="0..1" />
+          <End Role="SKILLS" Type="Self.SKILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSON">
+              <PropertyRef Name="ID_PERSON" />
+            </Principal>
+            <Dependent Role="SKILLS">
+              <PropertyRef Name="ID_PERSON" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USER_PERSON">
+          <End Role="PERSON" Type="Self.PERSON" Multiplicity="0..1" />
+          <End Role="USER" Type="Self.USER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSON">
+              <PropertyRef Name="ID_PERSON" />
+            </Principal>
+            <Dependent Role="USER">
+              <PropertyRef Name="ID_PERSON" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WORKEXPERIENCE_PERSON">
+          <End Role="PERSON" Type="Self.PERSON" Multiplicity="0..1" />
+          <End Role="WORKEXPERIENCE" Type="Self.WORKEXPERIENCE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PERSON">
+              <PropertyRef Name="ID_PERSON" />
+            </Principal>
+            <Dependent Role="WORKEXPERIENCE">
+              <PropertyRef Name="ID_PERSON" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ResumeBuilderEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="EDUCATIONs" EntityType="Self.EDUCATION" />
+          <EntitySet Name="People" EntityType="Self.PERSON" />
+          <EntitySet Name="SKILLS" EntityType="Self.SKILL" />
+          <EntitySet Name="USERs" EntityType="Self.USER" />
+          <EntitySet Name="WORKEXPERIENCEs" EntityType="Self.WORKEXPERIENCE" />
+          <AssociationSet Name="FK_EDUCATION_PERSON" Association="Self.FK_EDUCATION_PERSON">
+            <End Role="PERSON" EntitySet="People" />
+            <End Role="EDUCATION" EntitySet="EDUCATIONs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SKILLS_PERSON" Association="Self.FK_SKILLS_PERSON">
+            <End Role="PERSON" EntitySet="People" />
+            <End Role="SKILLS" EntitySet="SKILLS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USER_PERSON" Association="Self.FK_USER_PERSON">
+            <End Role="PERSON" EntitySet="People" />
+            <End Role="USER" EntitySet="USERs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WORKEXPERIENCE_PERSON" Association="Self.FK_WORKEXPERIENCE_PERSON">
+            <End Role="PERSON" EntitySet="People" />
+            <End Role="WORKEXPERIENCE" EntitySet="WORKEXPERIENCEs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ResumeBuilderModelStoreContainer" CdmEntityContainer="ResumeBuilderEntities">
+          <EntitySetMapping Name="EDUCATIONs">
+            <EntityTypeMapping TypeName="ResumeBuilderModel.EDUCATION">
+              <MappingFragment StoreEntitySet="EDUCATION">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SCHOOL_NAME" ColumnName="SCHOOL_NAME" />
+                <ScalarProperty Name="SCHOOL_LOCATION" ColumnName="SCHOOL_LOCATION" />
+                <ScalarProperty Name="DEGREE" ColumnName="DEGREE" />
+                <ScalarProperty Name="FIELD_OF_STUDY" ColumnName="FIELD_OF_STUDY" />
+                <ScalarProperty Name="GRADUATION_YEAR" ColumnName="GRADUATION_YEAR" />
+                <ScalarProperty Name="ID_PERSON" ColumnName="ID_PERSON" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="People">
+            <EntityTypeMapping TypeName="ResumeBuilderModel.PERSON">
+              <MappingFragment StoreEntitySet="PERSON">
+                <ScalarProperty Name="ID_PERSON" ColumnName="ID_PERSON" />
+                <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+                <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+                <ScalarProperty Name="STREET_ADDRESS" ColumnName="STREET_ADDRESS" />
+                <ScalarProperty Name="CITY" ColumnName="CITY" />
+                <ScalarProperty Name="STATE_PROVINCE" ColumnName="STATE_PROVINCE" />
+                <ScalarProperty Name="ZIPCODE" ColumnName="ZIPCODE" />
+                <ScalarProperty Name="DATE_OF_BIRTH" ColumnName="DATE_OF_BIRTH" />
+                <ScalarProperty Name="NUMBER" ColumnName="NUMBER" />
+                <ScalarProperty Name="EMAIL_ADD" ColumnName="EMAIL_ADD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SKILLS">
+            <EntityTypeMapping TypeName="ResumeBuilderModel.SKILL">
+              <MappingFragment StoreEntitySet="SKILLS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SKILL_NAME" ColumnName="SKILL_NAME" />
+                <ScalarProperty Name="ID_PERSON" ColumnName="ID_PERSON" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERs">
+            <EntityTypeMapping TypeName="ResumeBuilderModel.USER">
+              <MappingFragment StoreEntitySet="USER">
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="ID_PERSON" ColumnName="ID_PERSON" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WORKEXPERIENCEs">
+            <EntityTypeMapping TypeName="ResumeBuilderModel.WORKEXPERIENCE">
+              <MappingFragment StoreEntitySet="WORKEXPERIENCE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="JOB_TITLE" ColumnName="JOB_TITLE" />
+                <ScalarProperty Name="EMPLOYER" ColumnName="EMPLOYER" />
+                <ScalarProperty Name="CITY" ColumnName="CITY" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="START_MONTH" ColumnName="START_MONTH" />
+                <ScalarProperty Name="START_YEAR" ColumnName="START_YEAR" />
+                <ScalarProperty Name="END_MONTH" ColumnName="END_MONTH" />
+                <ScalarProperty Name="END_YEAR" ColumnName="END_YEAR" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="ID_PERSON" ColumnName="ID_PERSON" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
