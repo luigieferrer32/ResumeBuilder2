@@ -16,17 +16,7 @@ namespace ResumeBuilder.Controllers
 
         public ActionResult Register()
         {
-            var genderList = new List<SelectListItem>
-            {
-
-                new SelectListItem{Text = "Male", Value = "M"},
-                new SelectListItem{Text = "Female", Value = "F"}
-            };
-            ViewBag.Gender = new SelectList(genderList, "Value", "Text");
-
-
-            return View();
-        }
+      
        
 
     }
