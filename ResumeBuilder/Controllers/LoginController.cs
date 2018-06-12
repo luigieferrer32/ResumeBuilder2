@@ -26,5 +26,11 @@ namespace ResumeBuilder.Controllers
             return Json(new { access = access }, JsonRequestBehavior.AllowGet);
         }
 
+        [HttpGet]
+        public ActionResult Registration()
+        {
+            return View();
+        }
+
     }
 }

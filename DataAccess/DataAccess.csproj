@@ -104,6 +104,9 @@
     <Compile Include="SKILL.cs">
       <DependentUpon>ResumeBuilder.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>ResumeBuilder.tt</DependentUpon>
+    </Compile>
     <Compile Include="USER.cs">
       <DependentUpon>ResumeBuilder.tt</DependentUpon>
     </Compile>

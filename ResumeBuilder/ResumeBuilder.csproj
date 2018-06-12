@@ -249,6 +249,7 @@
     <Content Include="Views\Shared\_Custom.cshtml" />
     <Content Include="Views\Home\Pricing.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Login\Registration.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

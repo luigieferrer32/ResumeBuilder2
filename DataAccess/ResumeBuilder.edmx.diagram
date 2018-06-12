@@ -14,6 +14,7 @@
         <AssociationConnector Association="ResumeBuilderModel.FK_SKILLS_PERSON" ManuallyRouted="false" />
         <AssociationConnector Association="ResumeBuilderModel.FK_USER_PERSON" ManuallyRouted="false" />
         <AssociationConnector Association="ResumeBuilderModel.FK_WORKEXPERIENCE_PERSON" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ResumeBuilderModel.sysdiagram" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

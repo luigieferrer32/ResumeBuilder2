@@ -12,14 +12,12 @@ namespace DataAccess
     using System;
     using System.Collections.Generic;
     
-    public partial class USER
+    public partial class sysdiagram
     {
-        public int USER_ID { get; set; }
-        public string USERNAME { get; set; }
-        public string PASSWORD { get; set; }
-        public Nullable<int> ID_PERSON { get; set; }
-        public string EMAIL_ADDRESS { get; set; }
-    
-        public virtual PERSON PERSON { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }
