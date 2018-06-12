@@ -155,6 +155,8 @@
     <Content Include="images\54cae79f51277_-_fa-percent20porsche.jpg" />
     <Content Include="images\654842-steve-jobs-new.jpg" />
     <Content Include="images\admin.png" />
+    <Content Include="images\resume_builder-01trans.png" />
+    <Content Include="images\resume_builder-01.jpg" />
     <Content Include="images\Resume\angela-merkel-resume-1.jpg" />
     <Content Include="images\Resume\barack-obama-resume.jpg" />
     <Content Include="images\blog.png" />
@@ -185,6 +187,8 @@
     <Content Include="images\Resume\marissa-mayer-resume.jpg" />
     <Content Include="images\Resume\mark-zuckerberg-resume.jpg" />
     <Content Include="images\Resume\sheryl-sandberg-resume-1.jpg" />
+    <Content Include="images\rsz_resume_builder-01.jpg" />
+    <Content Include="images\rsz_resume_builder-01transBig.png" />
     <Content Include="images\staff_1.jpg" />
     <Content Include="images\staff_2.jpg" />
     <Content Include="images\staff_3.jpg" />
