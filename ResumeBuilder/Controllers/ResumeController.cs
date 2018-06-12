@@ -22,7 +22,7 @@ namespace ResumeBuilder.Controllers
 
             return View();
         }
-            return View();
-        }
+            
+       
     }
 }

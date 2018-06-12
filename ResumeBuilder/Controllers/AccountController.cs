@@ -14,9 +14,6 @@ namespace ResumeBuilder.Controllers
             return View();
         }
 
-        public ActionResult Register()
-        {
-      
        
 
     }
