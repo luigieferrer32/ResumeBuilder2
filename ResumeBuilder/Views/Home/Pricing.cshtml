@@ -11,7 +11,7 @@
 -->
 <html>
 <head>
-   
+
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="" />
     <meta property="og:image" content="" />
@@ -32,124 +32,59 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- Bulma Version 0.7.1-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
-    <link rel="stylesheet" type="text/css" href="~/css/hero.css">
+    <link rel="stylesheet" href="~/css/hero.css">
     <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Theme style  -->
+    <link rel="stylesheet" href=@Url.Content("~/css/style.css")>
+   
 </head>
 <body>
-    <header id="gtco-header" class="gtco-cover gtco-cover-xs gtco-inner" role="banner">
-        <div class="gtco-container">
-            <div class="row">
-                <div class="col-md-12 col-md-offset-0 text-left">
-                    <div class="display-tc">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <img src=@Url.Content("~/images/cube.png") alt="img">
-                                <h1>Your Resume, Made Easy</h1>
-
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section class="container">
-        @*<div class="columns features">
-            <div class="column is-4">
-                <div class="card is-shady">
-                    <div class="card-image has-text-centered">
-                        <i class="fa fa-paw"></i>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            <h4>Tristique senectus et netus et. </h4>
-                            <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                            <p><a href="#">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column is-4">
-                <div class="card is-shady">
-                    <div class="card-image has-text-centered">
-                        <i class="fa fa-empire"></i>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            <h4>Tempor orci dapibus ultrices in.</h4>
-                            <p>
-                                Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
-                                sed risus.
-                            </p>
-                            <p><a href="#">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column is-4">
-                <div class="card is-shady">
-                    <div class="card-image has-text-centered">
-                        <i class="fa fa-apple"></i>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            <h4> Leo integer malesuada nunc vel risus. </h4>
-                            <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                            <p><a href="#">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>*@
-        <div class=" gtco-heading text-center">
-            <h2 class="title">Create a resume you're proud of</h2><br>
-            <p class="subtitle">Stand out with a visual resume that highlights the key things about you and shows you're relevant.</p>
-        </div>
+    
+    <div class=" gtco-heading text-center is-marginless">
+        <h2 class="title">Create a resume you're proud of</h2>
+        <p class="subtitle">Stand out with a visual resume that highlights the key things about you and shows you're relevant.</p>
+    </div>
+    <section class="container  is-marginless ">
         <div class="sandbox">
-            <div class="tile is-ancestor bg-warning ">
-                <div class="tile is-parent is-shady">
-                    <article class="tile is-child bg-info text-center">
-                        <h1 class="text-center">Monthly</h1>
-                        <h2 class="text-center">$19<sup>.99/m</sup></h2>
-                        <p class="text-center">You will be billed <br />once in a month</p>
-                        <a href="" class="btn btn-danger btn-md active" role="button" aria-pressed="true">Buy Pro Monthly</a><br /><br />
+            <div class="tile is-ancestor ">
+                <div class="tile is-parent is-shady " style="outline-color:gray; outline-style:solid">
+                    <article class="tile is-child text-center bg-info">
+                        <h1 class="h1 is-dark">Monthly</h1>
+                        <h2 class="h2">$19<sup>.99/m</sup></h2>
+                        <p class="subtitle">You will be billed <br />once in a month</p>
+                        <a href="" class="button is-danger is-large is-outlined active" role="button" aria-pressed="true">Buy Pro Monthly</a><br /><br />
                         <p class="subtitle text-center">UPGRADE ANYTIME</p>
                     </article>
                 </div>
-                <div class="tile is-parent is-shady">
-                    <article class="tile is-child text-center btn-outline">
+                <div class="tile is-parent is-shady" style="outline-color: coral; outline-style:solid">
+                    <article class="tile is-child text-center">
                         <div class="tab center-tab text-center">
                             <div class="center-tab-header bg-danger">
                                 <p class="title">MOST POPULAR</p>
                             </div>
                         </div>
-                        <h1 class="text-center text-info">Quarterly</h1>
-                        <h2 class="text-center">$14<sup>.99/m</sup></h2>
-                        <p class="text-center"><strike>$59.97</strike> $44.97 <br />billed every 3 months</p>
+                        <h1 class="h1">Quarterly</h1>
+                        <h2 class="subtitle">$14<sup>.99/m</sup></h2>
+                        <p class="subtitle"><strike>$59.97</strike> $44.97 <br />billed every 3 months</p>
 
-                        <a href="" class="btn btn-primary btn-md  active" role="button" aria-pressed="true">Buy Pro Quarterly</a><br /><br />
+                        <a href="" class="btn btn-primary btn-md  active" role="button" aria-pressed="true">Buy Pro Quarterly</a><br />
                         <p class="subtitle">SAVE 25%</p>
                     </article>
                 </div>
-                <div class="tile is-parent is-shady">
+                <div class="tile is-parent is-shady " style="outline-color:gray; outline-style:solid">
                     <article class="tile is-child bg-info text-center">
-                        <h1 class="text-center">Semi-Annual</h1>
-                        <h2 class="text-center">$10<sup>.99/m</sup></h2>
-                        <p class="text-center"><strike>$119.94</strike> $65.94 <br />billed every 6 months</p>
-                        <a href="" class="btn btn-success btn-md active" role="button" aria-pressed="true">Buy Pro Semi-Annual</a><br /><br />
+                        <h1 class="h1">Semi-Annual</h1>
+                        <h2 class="subtitle">$10<sup>.99/m</sup></h2>
+                        <p class="subtitle"><strike>$119.94</strike> $65.94 <br />billed every 6 months</p>
+                        <a href="" class="button is-danger is-large is-outlined active" role="button" aria-pressed="true">Buy Pro Semi-Annual</a><br /><br />
                         <p class="subtitle text-center">SAVE 45%</p>
                     </article>
                 </div>
             </div>
         </div>
         <div class=" gtco-heading text-center">
-            <h2 class="title">What’s included in Pro</h2><br>
+            <h2 class="title">What’s included in Pro</h2>
         </div>
 
         <section class="column">
@@ -217,8 +152,21 @@
     </section>
 
 
-
-        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-        <script src="~/Scripts/bootstrap.min.js"></script>
+    <!-- jQuery -->
+    <script src=@Url.Content("~/js/jquery.min.js")></script>
+    <!-- jQuery Easing -->
+    <script src=@Url.Content("~/js/jquery.easing.1.3.js")></script>
+    <!-- Bootstrap -->
+    <script src=@Url.Content("~/js/bootstrap.min.js")></script>
+    <!-- Waypoints -->
+    <script src=@Url.Content("~/js/jquery.waypoints.min.js")></script>
+    <!-- Carousel -->
+    <script src=@Url.Content("~/js/owl.carousel.min.js")></script>
+    <!-- Magnific Popup -->
+    <script src=@Url.Content("~/js/jquery.magnific-popup.min.js")></script>
+    <script src=@Url.Content("~/js/magnific-popup-options.js")></script>
+    <!-- Main -->
+    <script src=@Url.Content("~/js/main.js")></script>
+  
 </body>
 </html>
