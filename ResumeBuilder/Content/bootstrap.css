@@ -94,6 +94,25 @@ hr {
        box-sizing: content-box;
 }
 
+.grid-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 50px 50px 50px; /*Make the grid smaller than the container*/
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+    .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+    }
+
+   
+
 mark {
   color: #000;
   background: #ff0;
@@ -410,6 +429,7 @@ p {
   font-weight: 200;
   line-height: 1.4;
 }
+
 
 @media (min-width: 768px) {
   .lead {

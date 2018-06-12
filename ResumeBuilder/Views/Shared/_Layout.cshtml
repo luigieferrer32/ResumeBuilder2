@@ -65,16 +65,11 @@
                     </div>
                     <div class="col-xs-10 text-right menu-1">
                         <ul>
-                            <li class="active"><a href=@Url.Action("Index", null, new { area = string.Empty, controller = "Home" })>Home</a></li>
+                            <li ><a href=@Url.Action("Index", null, new { area = string.Empty, controller = "Home" })>Home</a></li>
                             <li><a href=@Url.Action("SuccessfulResume", null, new { area = string.Empty, controller = "Home" })>Successful Resume</a></li>
-                            <li class="has-dropdown">
-                                <a href="services.html">Pricing</a>
-                                <ul class="dropdown">
-                                    <li><a href="#">Web Design</a></li>
-                                    <li><a href="#">eCommerce</a></li>
-                                    <li><a href="#">Branding</a></li>
-                                    <li><a href="#">API</a></li>
-                                </ul>
+                            <li >
+                                <a href=@Url.Action("Pricing", null, new { area = string.Empty, controller = "Home" })>Pricing</a>
+                                
                             </li>
                             <li><a href="portfolio.html">Sign-in</a></li>
                             <li><a href="#">Blogs/News Page</a></li>
