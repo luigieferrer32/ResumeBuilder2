@@ -77,7 +77,7 @@
                                 </label>
                             </div>
 
-                            <button class="button is-block is-info is-large is-fullwidth" type="submit" id="btnLogin">Register</button>
+                            <button class="button is-block is-info is-large is-fullwidth" type="submit" id="btnRegister">Register</button>
                         </form>
                     </div>
                     <p class="has-text-grey">
@@ -94,7 +94,7 @@
 </body>
 </html>
 
-@Scripts.Render("~/js/Login.js")
+@Scripts.Render("~/js/Register.js")
 <script type="text/javascript">
-    var userLoginUrl = '@Url.Action("AuthenticateUser", "Login")';
+    var userRegisterUrl = '@Url.Action("RegisterUser", "Login")';
 </script>

@@ -24,8 +24,8 @@ namespace DataAccess
         public Nullable<System.DateTime> END_MONTH { get; set; }
         public string END_YEAR { get; set; }
         public string DESCRIPTION { get; set; }
-        public Nullable<int> ID_PERSON { get; set; }
+        public Nullable<int> USER_ID { get; set; }
     
-        public virtual PERSON PERSON { get; set; }
+        public virtual USER USER { get; set; }
     }
 }

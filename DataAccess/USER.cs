@@ -14,12 +14,33 @@ namespace DataAccess
     
     public partial class USER
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public USER()
+        {
+            this.EDUCATIONs = new HashSet<EDUCATION>();
+            this.SKILLS = new HashSet<SKILL>();
+            this.WORKEXPERIENCEs = new HashSet<WORKEXPERIENCE>();
+        }
+    
         public int USER_ID { get; set; }
         public string USERNAME { get; set; }
         public string PASSWORD { get; set; }
-        public Nullable<int> ID_PERSON { get; set; }
         public string EMAIL_ADDRESS { get; set; }
+        public string FIRST_NAME { get; set; }
+        public string LAST_NAME { get; set; }
+        public string STREET_ADDRESS { get; set; }
+        public string CITY { get; set; }
+        public string STATE_PROVINCE { get; set; }
+        public string ZIPCODE { get; set; }
+        public Nullable<System.DateTime> DATE_OF_BIRTH { get; set; }
+        public string NUMBER { get; set; }
+        public string EMAIL_ADD { get; set; }
     
-        public virtual PERSON PERSON { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<EDUCATION> EDUCATIONs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SKILL> SKILLS { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<WORKEXPERIENCE> WORKEXPERIENCEs { get; set; }
     }
 }

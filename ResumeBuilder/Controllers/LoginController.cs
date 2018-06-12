@@ -1,5 +1,7 @@
 ﻿using BusinessLogic.Manager;
 using DataAccess;
+using ResumeBuilder.Mapper;
+using ResumeBuilder.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +32,17 @@ namespace ResumeBuilder.Controllers
         public ActionResult Registration()
         {
             return View();
+        }
+
+        public JsonResult RegisterUser(UserViewModel model)
+        {
+            model.IdPerson = model.UserId;
+            UserMapper userMapper = new UserMapper();
+            UserManager userManager = new UserManager();
+            var user = userMapper.UserViewModelToUser(model);
+            userManager.RegisterUser(user);
+            var status = true;
+            return Json(new { status = status }, JsonRequestBehavior.AllowGet);
         }
 
     }
