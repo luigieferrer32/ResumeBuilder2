@@ -202,6 +202,7 @@
     <Content Include="js\main.js" />
     <Content Include="js\modernizr-2.6.2.min.js" />
     <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\Register.js" />
     <Content Include="js\respond.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -230,6 +231,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Mapper\UserMapper.cs" />
     <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -250,6 +252,7 @@
     <Content Include="Views\Shared\_Custom.cshtml" />
     <Content Include="Views\Home\Pricing.cshtml" />
     <Content Include="Views\Resume\Resume.cshtml" />
+    <Content Include="Views\Login\Registration.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

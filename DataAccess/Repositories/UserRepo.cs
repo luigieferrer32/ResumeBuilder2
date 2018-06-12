@@ -37,21 +37,7 @@ namespace DataAccess.Repositories
             }
         }
 
-        public PERSON RetrievedByID(int ID)
-        {
-            using (var context = new ResumeBuilderEntities())
-            {
-                return context.Set<PERSON>().Where(x => x.ID_PERSON == ID).SingleOrDefault();
-            }
-        }
-
-        public PERSON RetrievedByFirstName(String name)
-        {
-            using (var context = new ResumeBuilderEntities())
-            {
-                return context.Set<PERSON>().Where(x => x.FIRST_NAME == name).SingleOrDefault();
-            }
-        }
+        
 
         public USER RetrieveByName (string name)
         {

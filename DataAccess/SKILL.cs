@@ -16,8 +16,8 @@ namespace DataAccess
     {
         public int ID { get; set; }
         public string SKILL_NAME { get; set; }
-        public Nullable<int> ID_PERSON { get; set; }
+        public Nullable<int> USER_ID { get; set; }
     
-        public virtual PERSON PERSON { get; set; }
+        public virtual USER USER { get; set; }
     }
 }

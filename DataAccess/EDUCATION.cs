@@ -20,8 +20,8 @@ namespace DataAccess
         public string DEGREE { get; set; }
         public string FIELD_OF_STUDY { get; set; }
         public Nullable<System.DateTime> GRADUATION_YEAR { get; set; }
-        public Nullable<int> ID_PERSON { get; set; }
+        public Nullable<int> USER_ID { get; set; }
     
-        public virtual PERSON PERSON { get; set; }
+        public virtual USER USER { get; set; }
     }
 }
