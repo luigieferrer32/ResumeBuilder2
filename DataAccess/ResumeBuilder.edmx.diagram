@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="e620d89f10e54c4485594248f2c23ef5" Name="Diagram1" ZoomLevel="64">
         <EntityTypeShape EntityType="ResumeBuilderModel.EDUCATION" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ResumeBuilderModel.PERSON" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ResumeBuilderModel.PERSON" Width="1.5" PointX="0.625" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ResumeBuilderModel.SKILL" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ResumeBuilderModel.USER" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ResumeBuilderModel.WORKEXPERIENCE" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />

@@ -10,7 +10,7 @@ namespace DataAccess.Repositories
     public class UserRepo
     {
         //database modify
-        public void Create(UserRepo entity)
+        public void Create(USER entity)
         {
             using(var context = new ResumeBuilderEntities())
             {

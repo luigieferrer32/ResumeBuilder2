@@ -28,11 +28,19 @@ namespace BusinessLogic.Manager
                 return AccessStatus;
             }
 
-            //public void RegisterUser(USER user)
-            //{
-            //    UserRepo userRepo = new UserRepo();
-            //    userRepo.Create(user);
-            //}
+        //public void RegisterUser(USER user)
+        //{
+        //    UserRepo userRepo = new UserRepo();
+        //    userRepo.Create(user);
+        //}
+        public void RegisterUser(USER user)
+        {
+            UserRepo userRepo = new UserRepo();
+            userRepo.Create(user);
+
+        }
 
     }
+
+ 
 }
