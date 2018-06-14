@@ -20,7 +20,27 @@
     <!-- Bulma Version 0.7.1-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/login.css">
-
+    <!-- Animate.css -->
+    <link rel="stylesheet" href=@Url.Content("~/css/animate.css")>
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href=@Url.Content("~/css/icomoon.css")>
+    <!-- Themify Icons-->
+    <link rel="stylesheet" href=@Url.Content("~/css/themify-icons.css")>
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href=@Url.Content("~/css/bootstrap.css")>
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href=@Url.Content("~/css/magnific-popup.css")>
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href=@Url.Content("~/css/owl.carousel.min.css")>
+    <link rel="stylesheet" href=@Url.Content("~/css/owl.theme.default.min.css")>
+    <!-- Theme style  -->
+    <link rel="stylesheet" href=@Url.Content("~/css/style.css")>
+    <!-- Modernizr JS -->
+    <script src=@Url.Content("~/js/modernizr-2.6.2.min.js")></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 
@@ -57,11 +77,11 @@
                             </div>
 
                             @*<div class="field">
-            <div class="control">
-                @Html.TextBoxFor(model => model.USERNAME, new { @class = "form-control", placeholder = "Enter Username", id = "Username" })
-                <span id="username-error-msg" class="error-msg" style="color:red"></span>
-            </div>
-        </div>*@
+                                    <div class="control">
+                                        @Html.TextBoxFor(model => model.USERNAME, new { @class = "form-control", placeholder = "Enter Username", id = "Username" })
+                                        <span id="username-error-msg" class="error-msg" style="color:red"></span>
+                                    </div>
+                                </div>*@
 
                             <div class="field">
                                 <div class="control">
@@ -82,7 +102,7 @@
                         </form>
                     </div>
                     <p class="has-text-grey">
-                        <a href="../">Login</a> &nbsp;·&nbsp;
+                        <a href=@Url.Action("Login", null, new { area = string.Empty, controller = "Login" })>Login</a> &nbsp;·&nbsp;
                         <a href="../">Forgot Password</a> &nbsp;·&nbsp;
                         <a href="../">Need Help?</a>
                     </p>
@@ -90,7 +110,21 @@
             </div>
         </div>
     </section>
-
+    <!-- jQuery -->
+    <script src=@Url.Content("~/js/jquery.min.js")></script>
+    <!-- jQuery Easing -->
+    <script src=@Url.Content("~/js/jquery.easing.1.3.js")></script>
+    <!-- Bootstrap -->
+    <script src=@Url.Content("~/js/bootstrap.min.js")></script>
+    <!-- Waypoints -->
+    <script src=@Url.Content("~/js/jquery.waypoints.min.js")></script>
+    <!-- Carousel -->
+    <script src=@Url.Content("~/js/owl.carousel.min.js")></script>
+    <!-- Magnific Popup -->
+    <script src=@Url.Content("~/js/jquery.magnific-popup.min.js")></script>
+    <script src=@Url.Content("~/js/magnific-popup-options.js")></script>
+    <!-- Main -->
+    <script src=@Url.Content("~/js/main.js")></script>
 </body>
 </html>
 
