@@ -36,7 +36,6 @@ namespace ResumeBuilder.Controllers
 
         public JsonResult RegisterUser(UserViewModel model)
         {
-            model.IdPerson = model.UserId;
             UserMapper userMapper = new UserMapper();
             UserManager userManager = new UserManager();
             var user = userMapper.UserViewModelToUser(model);

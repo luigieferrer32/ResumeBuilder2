@@ -1,5 +1,4 @@
 ﻿$("#btnRegister").on('click', function () {
-    alert();
     var errorCtr = 0;
 
     var username = $('#Username').val();
@@ -25,7 +24,6 @@
     }
 
     if (errorCtr == 0) {
-        alert();
         $.ajax({
             type: "POST",
             url: userRegisterUrl,

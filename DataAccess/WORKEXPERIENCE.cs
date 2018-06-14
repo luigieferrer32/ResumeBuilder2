@@ -25,6 +25,7 @@ namespace DataAccess
         public string END_YEAR { get; set; }
         public string DESCRIPTION { get; set; }
         public Nullable<int> USER_ID { get; set; }
+        public string REFERENCE { get; set; }
     
         public virtual USER USER { get; set; }
     }
