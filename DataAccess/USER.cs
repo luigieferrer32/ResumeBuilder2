@@ -34,6 +34,7 @@ namespace DataAccess
         public string ZIPCODE { get; set; }
         public Nullable<System.DateTime> DATE_OF_BIRTH { get; set; }
         public string NUMBER { get; set; }
+        public string EMAIL_ADD { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EDUCATION> EDUCATIONs { get; set; }

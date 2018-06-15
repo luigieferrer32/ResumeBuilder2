@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ResumeBuilder.Mapper;
+using ResumeBuilder.Models;
+using DataAccess.Repositories;
+
 
 namespace ResumeBuilder.Controllers
 {
@@ -11,18 +15,17 @@ namespace ResumeBuilder.Controllers
         // GET: Resume
         public ActionResult Resume()
         {
-            var genderList = new List<SelectListItem>
-            {
-
-                new SelectListItem{Text = "Male", Value = "M"},
-                new SelectListItem{Text = "Female", Value = "F"}
-            };
-            ViewBag.Gender = new SelectList(genderList, "Value", "Text");
-
-
             return View();
         }
             
-       
+       public JsonResult UpdateAssistance(UserViewModel model)
+        {
+            UserMapper userMapper = new UserMapper();
+            UserRepo userRepo = new UserRepo();
+            var UpdatedModel = userRepo.Update(userMapper.UserViewModelToResume(model));
+
+            return Json(new { UpdatedModel }, JsonRequestBehavior.AllowGet);
+
+        }
     }
 }
