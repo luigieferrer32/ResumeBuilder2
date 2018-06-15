@@ -19,13 +19,14 @@ namespace DataAccess.Repositories
             }
         }
 
-        public void Update(UserRepo entity)
+        public USER Update (USER entity)
         {
             using (var context = new ResumeBuilderEntities())
             {
                 context.Entry(entity).State = EntityState.Modified;
                 context.SaveChanges();
             }
+            return entity;
         }
 
         public void Delete(UserRepo entity)

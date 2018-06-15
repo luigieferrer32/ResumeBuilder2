@@ -29,5 +29,22 @@ namespace ResumeBuilder.Mapper
                 };
         
         }
+
+        public USER UserViewModelToResume(UserViewModel user)
+        {
+
+            return new USER()
+            {
+                FIRST_NAME = user.FirstName,
+                LAST_NAME = user.LastName,
+                STREET_ADDRESS = user.StreetAddress,
+                CITY = user.City,
+                STATE_PROVINCE = user.StateProvince,
+                ZIPCODE = user.ZipCode,
+                DATE_OF_BIRTH = user.DateOfBirth,
+                NUMBER = user.Number
+            };
+
+        }
     }
 }
