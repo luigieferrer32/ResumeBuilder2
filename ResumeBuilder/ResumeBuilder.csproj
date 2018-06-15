@@ -187,12 +187,10 @@
     <Content Include="images\Resume\marissa-mayer-resume.jpg" />
     <Content Include="images\Resume\mark-zuckerberg-resume.jpg" />
     <Content Include="images\Resume\sheryl-sandberg-resume-1.jpg" />
-    <Content Include="images\rsz_resume_builder-01.jpg" />
     <Content Include="images\rsz_resume_builder-01transBig.png" />
     <Content Include="images\staff_1.jpg" />
     <Content Include="images\staff_2.jpg" />
     <Content Include="images\staff_3.jpg" />
-    <Content Include="images\steve jobs.jpg" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\google_map.js" />
     <Content Include="js\jquery.countTo.js" />
@@ -210,6 +208,9 @@
     <Content Include="js\respond.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile2.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
