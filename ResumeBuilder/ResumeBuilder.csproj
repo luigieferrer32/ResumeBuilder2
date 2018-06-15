@@ -206,6 +206,7 @@
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="js\Register.js" />
     <Content Include="js\respond.min.js" />
+    <Content Include="js\Resume.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
