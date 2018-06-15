@@ -18,7 +18,6 @@
     }
 
     if (errorCtr == 0) {
-        alert();
         $.ajax({
             type: "POST",
             url: userLoginUrl,
@@ -40,6 +39,5 @@ function AuthenticationMessage(data) {
     }
     else {
         alert("User Access is Denied");
-
     }
 }

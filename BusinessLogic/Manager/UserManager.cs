@@ -24,7 +24,6 @@ namespace BusinessLogic.Manager
                         AccessStatus = true;
                     }
                 }
-
                 return AccessStatus;
             }
 

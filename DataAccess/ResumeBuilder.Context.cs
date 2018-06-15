@@ -29,6 +29,5 @@ namespace DataAccess
         public virtual DbSet<SKILL> SKILLS { get; set; }
         public virtual DbSet<USER> USERs { get; set; }
         public virtual DbSet<WORKEXPERIENCE> WORKEXPERIENCEs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

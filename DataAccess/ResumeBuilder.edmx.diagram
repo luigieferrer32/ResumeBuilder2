@@ -9,7 +9,6 @@
         <EntityTypeShape EntityType="ResumeBuilderModel.SKILL" Width="1.5" PointX="7.125" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="ResumeBuilderModel.USER" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
         <EntityTypeShape EntityType="ResumeBuilderModel.WORKEXPERIENCE" Width="1.5" PointX="9" PointY="10.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ResumeBuilderModel.sysdiagram" Width="1.5" PointX="5.375" PointY="0.75" />
         <AssociationConnector Association="ResumeBuilderModel.FK_EDUCATION_USER" />
         <AssociationConnector Association="ResumeBuilderModel.FK_SKILLS_USER" />
         <AssociationConnector Association="ResumeBuilderModel.FK_WORKEXPERIENCE_USER" />

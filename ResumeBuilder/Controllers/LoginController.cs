@@ -24,7 +24,6 @@ namespace ResumeBuilder.Controllers
         {
             UserManager userManager = new UserManager();
             var access = userManager.AuthenticateUser(user);
-
             return Json(new { access = access }, JsonRequestBehavior.AllowGet);
         }
 

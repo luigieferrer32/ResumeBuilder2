@@ -224,11 +224,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\TEMPLATE.cshtml" />
     <Content Include="Views\Home\SuccessfulResume.cshtml" />
-    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ResumeController.cs" />
@@ -257,6 +255,7 @@
     <Content Include="Views\Home\Pricing.cshtml" />
     <Content Include="Views\Resume\Resume.cshtml" />
     <Content Include="Views\Login\Registration.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
