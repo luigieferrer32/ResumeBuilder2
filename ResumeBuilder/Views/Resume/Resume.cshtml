@@ -1,5 +1,7 @@
 ﻿@model DataAccess.USER
 @using System.Web.Optimization
+@Scripts.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
 @{
     ViewBag.Title = "Register";
 }
@@ -10,8 +12,7 @@
     <h2>Register</h2>
 </head>
 <body>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryval")
+
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()

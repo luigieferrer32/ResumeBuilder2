@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using ResumeBuilder.Mapper;
 using ResumeBuilder.Models;
 using DataAccess.Repositories;
+using DataAccess;
 
 
 namespace ResumeBuilder.Controllers
@@ -22,10 +23,13 @@ namespace ResumeBuilder.Controllers
         {
             UserMapper userMapper = new UserMapper();
             UserRepo userRepo = new UserRepo();
+            
+         
             var UpdatedModel = userRepo.Update(userMapper.UserViewModelToResume(model));
 
             return Json(new { UpdatedModel }, JsonRequestBehavior.AllowGet);
 
         }
+
     }
 }

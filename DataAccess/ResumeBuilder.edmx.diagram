@@ -5,16 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e620d89f10e54c4485594248f2c23ef5" Name="Diagram1" ZoomLevel="64">
-        <EntityTypeShape EntityType="ResumeBuilderModel.EDUCATION" Width="1.5" PointX="6" PointY="5.125" />
-        <EntityTypeShape EntityType="ResumeBuilderModel.PERSON" Width="1.5" PointX="0.75" PointY="9.75" />
-        <EntityTypeShape EntityType="ResumeBuilderModel.SKILL" Width="1.5" PointX="3" PointY="5.5" />
-        <EntityTypeShape EntityType="ResumeBuilderModel.sysdiagram" Width="1.5" PointX="5.75" PointY="1.125" />
-        <EntityTypeShape EntityType="ResumeBuilderModel.USER" Width="1.5" PointX="0.75" PointY="4.5" />
-        <EntityTypeShape EntityType="ResumeBuilderModel.WORKEXPERIENCE" Width="1.5" PointX="3" PointY="0.75" />
-        <AssociationConnector Association="ResumeBuilderModel.FK_EDUCATION_PERSON" />
+        <EntityTypeShape EntityType="ResumeBuilderModel.EDUCATION" Width="1.5" PointX="3" PointY="8.125" />
+        <EntityTypeShape EntityType="ResumeBuilderModel.SKILL" Width="1.5" PointX="3" PointY="1.25" />
+        <EntityTypeShape EntityType="ResumeBuilderModel.USER" Width="1.5" PointX="0.75" PointY="4" />
+        <EntityTypeShape EntityType="ResumeBuilderModel.WORKEXPERIENCE" Width="1.5" PointX="3" PointY="3.875" />
         <AssociationConnector Association="ResumeBuilderModel.FK_EDUCATION_USER" />
-        <AssociationConnector Association="ResumeBuilderModel.FK_SKILLS_PERSON" />
-        <AssociationConnector Association="ResumeBuilderModel.FK_WORKEXPERIENCE_PERSON" />
         <AssociationConnector Association="ResumeBuilderModel.FK_SKILLS_USER" />
         <AssociationConnector Association="ResumeBuilderModel.FK_WORKEXPERIENCE_USER" />
       </Diagram>

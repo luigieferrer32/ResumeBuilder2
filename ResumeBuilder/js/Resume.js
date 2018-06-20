@@ -1,28 +1,25 @@
 ﻿$("#btnSave").on('click', function () {
-    var errorCtr = 0;
-    var Firstname = $('#txtFirstname').val();
-    alert(Firstname);
    
-    if (errorCtr == 0) 
-        {
-        alert(Firstname);
+   
+    var addr = $("txtCity").val();
+    alert(addr);
         $.ajax({
             type: "POST",
             url: UpdateInfoUrl,
             data: {
                 Firstname: $("#txtFirstname").val(),
                 Lastname: $("#txtLastname").val(),
-                Address: $("#txtAddress").val(),
-                City: $("txtCity").val(),
-                Province: $("txtProvince").val(),
-                Zipcode: $("txtZipcode").val(),
-                EmailAdress: $("txtEmailAddress").val(),
-                ContactNo: $("txtContactNo").val()
+                StreetAddress: $("#txtAddress").val(),
+                City: $("#txtCity").val(),
+                StateProvince: $("#txtProvince").val(),
+                ZipCode: $("#txtZipcode").val(),
+                Number: $("#txtContactNo").val()
             },
-            dataType: "json"
+            dataType: "json",
+
 
         });
-        }
+      
      
             
     })

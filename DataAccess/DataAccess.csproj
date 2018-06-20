@@ -101,6 +101,12 @@
     <Compile Include="SKILL.cs">
       <DependentUpon>ResumeBuilder.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>ResumeBuilder.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>ResumeBuilder.tt</DependentUpon>
+    </Compile>
     <Compile Include="USER.cs">
       <DependentUpon>ResumeBuilder.tt</DependentUpon>
     </Compile>

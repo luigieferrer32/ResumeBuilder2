@@ -32,9 +32,16 @@ namespace ResumeBuilder.Mapper
 
         public USER UserViewModelToResume(UserViewModel user)
         {
+            //ResumeBuilderEntities context = new ResumeBuilderEntities();
+            //var item = context.USERs.Where(x => x.USER_ID == 10).First();
+            //Console.WriteLine(item.USERNAME.ToString());
+            //item.FIRST_NAME = user.FirstName;
+            //item.LAST_NAME = user.LastName;
+
 
             return new USER()
             {
+              
                 FIRST_NAME = user.FirstName,
                 LAST_NAME = user.LastName,
                 STREET_ADDRESS = user.StreetAddress,
@@ -44,7 +51,6 @@ namespace ResumeBuilder.Mapper
                 DATE_OF_BIRTH = user.DateOfBirth,
                 NUMBER = user.Number
             };
-
         }
     }
 }
