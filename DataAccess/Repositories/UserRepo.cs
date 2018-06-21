@@ -22,18 +22,19 @@ namespace DataAccess.Repositories
 
         public USER Update (USER entity)
         {
+             
             using (var context = new ResumeBuilderEntities())
             {
-                var item = context.USERs.Where(x => x.USER_ID == 10).First();
-                item.FIRST_NAME = entity.FIRST_NAME;
-                item.LAST_NAME = entity.LAST_NAME;
-                item.STREET_ADDRESS = entity.STREET_ADDRESS;
-                 item.CITY = entity.CITY;
-                 item.STATE_PROVINCE = entity.STATE_PROVINCE;
-                 item.ZIPCODE = entity.ZIPCODE;
-                 item.DATE_OF_BIRTH = entity.DATE_OF_BIRTH;
-                 item.NUMBER = entity.NUMBER;
-                context.Entry(item).State = EntityState.Modified;
+                //var item = context.USERs.Where(x => x.USER_ID == 10).First();
+                //item.FIRST_NAME = entity.FIRST_NAME;
+                //item.LAST_NAME = entity.LAST_NAME;
+                //item.STREET_ADDRESS = entity.STREET_ADDRESS;
+                // item.CITY = entity.CITY;
+                // item.STATE_PROVINCE = entity.STATE_PROVINCE;
+                // item.ZIPCODE = entity.ZIPCODE;
+                // item.DATE_OF_BIRTH = entity.DATE_OF_BIRTH;
+                // item.NUMBER = entity.NUMBER;
+                context.Entry(entity).State = EntityState.Modified;
                 context.SaveChanges();
             }
             return entity;

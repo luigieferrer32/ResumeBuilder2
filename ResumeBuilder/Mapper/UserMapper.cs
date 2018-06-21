@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using BusinessLogic.Manager;
 
 namespace ResumeBuilder.Mapper
 {
@@ -37,8 +38,7 @@ namespace ResumeBuilder.Mapper
             //Console.WriteLine(item.USERNAME.ToString());
             //item.FIRST_NAME = user.FirstName;
             //item.LAST_NAME = user.LastName;
-
-
+          
             return new USER()
             {
               

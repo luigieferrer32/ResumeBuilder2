@@ -41,6 +41,7 @@
                                 <img src="https://placehold.it/128x128">
                             </figure>*@
                         <form>
+                          
 
                             <div class="field">
                                 <div class="control">
@@ -74,4 +75,7 @@
 @Scripts.Render("~/js/Login.js")
 <script type="text/javascript">
     var userLoginUrl = '@Url.Action("AuthenticateUser", "Login")';
+</script>
+<script type="text/javascript">
+    var GetUserIDUrl = '@Url.Action("AuthenticateUser", "Resume")';
 </script>

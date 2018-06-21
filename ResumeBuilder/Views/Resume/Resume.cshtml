@@ -1,5 +1,7 @@
 ﻿@model DataAccess.USER
+
 @using System.Web.Optimization
+
 @Scripts.Render("~/Content/css")
 @Scripts.Render("~/bundles/modernizr")
 @{
@@ -21,9 +23,19 @@
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "Text-danger" })
 
+
+            <div class="form-group">
+                <div class="col-s-10">
+                    @*@Html.EditorFor(model => model.USER_ID, new { htmlAttributes = new { @class = "form-control", @id = "txtUserID", @Value = @ViewBag.UserId, @type = "hidden" } })*@
+                    @Html.TextBoxFor(model => model.USER_ID, new { @id = "txtUserID", @Value = @ViewBag.UserId, @type = "hidden" })
+                    @*@Html.ValidationMessageFor(model => model.USER_ID, "", new { @class = "text-danger" })*@
+                </div>
+
+            </div>
+
             <div class="form-group">
                 @Html.LabelFor(model => model.FIRST_NAME, htmlAttributes: new { @class = "Control-label col-md-2" })
-                <div class="col-md-10">
+                <div class="col-s-10">
                     @Html.EditorFor(model => model.FIRST_NAME, new { htmlAttributes = new { @class = "form-control", @id = "txtFirstname" } })
                     @Html.ValidationMessageFor(model => model.FIRST_NAME, "", new { @class = "text-danger" })
                 </div>
@@ -41,7 +53,7 @@
 
             <div class="form-group">
                 @Html.LabelFor(model => model.STREET_ADDRESS, htmlAttributes: new { @class = "Control-label col-md-2" })
-                <div class="col-md-10">
+                <div class="col-s-10">
                     @Html.EditorFor(model => model.STREET_ADDRESS, new { htmlAttributes = new { @class = "form-control", @id = "txtAddress" } })
                     @Html.ValidationMessageFor(model => model.STREET_ADDRESS, "", new { @class = "text-danger" })
                 </div>

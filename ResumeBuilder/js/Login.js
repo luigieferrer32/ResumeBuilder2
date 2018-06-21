@@ -28,6 +28,7 @@
             dataType: "json",
             success: function (data) {
                 AuthenticationMessage(data);
+               
             }
         });
     }
@@ -41,3 +42,6 @@ function AuthenticationMessage(data) {
         alert("User Access is Denied");
     }
 }
+
+
+

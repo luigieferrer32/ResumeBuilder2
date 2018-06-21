@@ -17,14 +17,18 @@ namespace ResumeBuilder.Controllers
         [HttpGet]
         public ActionResult Login()
         {
+            
             return View();
         }
 
         public JsonResult AuthenticateUser(USER user)
         {
+           
             UserManager userManager = new UserManager();
             var access = userManager.AuthenticateUser(user);
+            ViewBag.UserId = user.USER_ID;
             return Json(new { access = access }, JsonRequestBehavior.AllowGet);
+          
         }
 
         [HttpGet]

@@ -1,12 +1,13 @@
 ﻿$("#btnSave").on('click', function () {
    
    
-    var addr = $("txtCity").val();
-    alert(addr);
+    
+    alert($("#txtUserID").val());
         $.ajax({
             type: "POST",
             url: UpdateInfoUrl,
             data: {
+                UserId: $("#txtUserID").val(),
                 Firstname: $("#txtFirstname").val(),
                 Lastname: $("#txtLastname").val(),
                 StreetAddress: $("#txtAddress").val(),
