@@ -8,7 +8,6 @@ namespace ResumeBuilder
         public void Configuration(IAppBuilder app)
         {
             SecurityConfig.Configure(app);
-            WebApiConfig.Configure(app);
         }
     }
 }
