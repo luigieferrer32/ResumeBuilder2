@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Web.WebPages.OAuth;
+using ResumeBuilder.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +15,8 @@ namespace ResumeBuilder
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            AuthConfig.RegisterAuth();
+
         }
     }
 }
