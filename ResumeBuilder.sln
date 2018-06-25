@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{A5251B14-19EC-4527-9F98-FF59A74AFA9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResumeBuilder1.0", "ResumeBuilder1.0\ResumeBuilder1.0.csproj", "{FC5C735C-9D80-49B8-B0EE-E1C84D802042}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{A5251B14-19EC-4527-9F98-FF59A74AFA9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5251B14-19EC-4527-9F98-FF59A74AFA9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5251B14-19EC-4527-9F98-FF59A74AFA9E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FC5C735C-9D80-49B8-B0EE-E1C84D802042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC5C735C-9D80-49B8-B0EE-E1C84D802042}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC5C735C-9D80-49B8-B0EE-E1C84D802042}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC5C735C-9D80-49B8-B0EE-E1C84D802042}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

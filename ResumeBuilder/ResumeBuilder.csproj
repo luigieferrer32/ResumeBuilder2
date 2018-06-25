@@ -308,8 +308,6 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SecurityConfig.cs" />
-    <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Common\ChallengeResult.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginAutController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -365,6 +363,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Common\" />
     <Folder Include="Views\Account\" />
     <Folder Include="Views\ApiHome\" />
     <Folder Include="Views\LoginAut\" />
