@@ -101,6 +101,8 @@
       <DependentUpon>ResumeBuilder.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IResumeRepo.cs" />
+    <Compile Include="Repositories\ResumeRepo.cs" />
     <Compile Include="Repositories\UserRepo.cs" />
     <Compile Include="ResumeBuilder.Context.cs">
       <AutoGen>True</AutoGen>
